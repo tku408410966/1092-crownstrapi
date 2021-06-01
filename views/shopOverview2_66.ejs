@@ -8,11 +8,12 @@
   </head>
   <body>
     <div class="header">
-      <a href="/" class="logo-container">
+      <a href="/crown" class="logo-container">
         <img src="/assets/crown.svg" />
       </a>
       <div class="options">
-        <a href="/overview.html" class="option">Shop</a>
+        <a href="/shop" class="option">Shop</a>
+        <a href="/shop/overview" class="option">Overview</a>
         <a href="/shop" class="option">Contact</a>
         <a href="/signin" class="option">Sign In</a>
         <div class="cart-icon" onclick="cartToggle()">
@@ -44,19 +45,86 @@
     </div>
 
     <div class="shop-page">
-      <div class="collection-page">
-        <h1 class="title"><%= title.toUpperCase() %></h1>
-        <div class="items">
-          <% for (let i=0; i< data.length; i++) { %>
-          <div class="collection-item">
-            <img class="image" src="<%= data[i].local_url %>" />
-            <div class="collection-footer">
-              <span class="name"><%= data[i].name %></span>
-              <span class="price"><%= data[i].price %></span>
+      <div class="collection-overview">
+        <div class="collection-preview">
+          <h2 class="title">Hats</h2>
+          <div class="preview">
+            <% for(let i=0; i< ( count< data_h.length ? count :
+            data_h.length ); i++) { %>
+            <div class="collection-item">
+              <img class="image" src="<%= data_h[i].local_url %>" />
+              <div class="collection-footer">
+                <span class="name"><%= data_h[i].name %></span>
+                <span class="price"><%= data_h[i].price %></span>
+              </div>
+              <button class="custom-button">Add to Cart</button>
             </div>
-            <button class="custom-button">Add to Cart</button>
+            <% } %>
           </div>
-          <% } %>
+        </div>
+        <div class="collection-preview">
+          <h1 class="title">Jackets</h1>
+          <div class="preview">
+            <% for(let i=0; i< (count < data_j.length ? count :
+            data_j.length ); i++) { %>
+            <div class="collection-item">
+              <img class="image" src="<%= data_j[i].local_url %>" />
+              <div class="collection-footer">
+                <span class="name"><%= data_j[i].name %></span>
+                <span class="price"><%= data_j[i].price %></span>
+              </div>
+              <button class="custom-button">Add to Cart</button>
+            </div>
+            <% } %>
+          </div>
+        </div>
+        <div class="collection-preview">
+          <h2 class="title">Sneakers</h2>
+          <div class="preview">
+            <% for(let i=0; i< (count < data_s.length ? count :
+            data_s.length ); i++) { %>
+            <div class="collection-item">
+              <img class="image" src="<%= data_s[i].local_url %>" />
+              <div class="collection-footer">
+                <span class="name"><%= data_s[i].name %></span>
+                <span class="price"><%= data_s[i].name %></span>
+              </div>
+              <button class="custom-button">Add to Cart</button>
+            </div>
+            <% } %>
+          </div>
+        </div>
+        <div class="collection-preview">
+          <h2 class="title">Womens</h2>
+          <div class="preview">
+            <% for(let i=0; i< (count < data_w.length ? count :
+            data_w.length ); i++) { %>
+            <div class="collection-item">
+              <img class="image" src="<%= data_w[i].local_url %>" />
+              <div class="collection-footer">
+                <span class="name"><%= data_w[i].name %></span>
+                <span class="price"><%= data_w[i].price %></span>
+              </div>
+              <button class="custom-button">Add to Cart</button>
+            </div>
+            <% } %>
+          </div>
+        </div>
+        <div class="collection-preview">
+          <h2 class="title">Mens</h2>
+          <div class="preview">
+            <% for(let i=0; i< (count < data_m.length ? count :
+            data_m.length ); i++) { %>
+            <div class="collection-item">
+              <img class="image" src="<%= data_m[i].local_url %>" />
+              <div class="collection-footer">
+                <span class="name"><%= data_m[i].name %></span>
+                <span class="price"><%= data_m[i].price %></span>
+              </div>
+              <button class="custom-button">Add to Cart</button>
+            </div>
+            <% } %>
+          </div>
         </div>
       </div>
     </div>

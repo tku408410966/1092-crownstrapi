@@ -36,7 +36,7 @@ module.exports = {
         `SELECT * FROM products WHERE category = 5`
         );
     const count = 4;
-    console.log("data", data);
+    //console.log("data", data);
     return await ctx.render("shopOverview2_66", {
         data_h,
         data_j,
